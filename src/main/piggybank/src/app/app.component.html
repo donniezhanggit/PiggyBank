@@ -1,0 +1,23 @@
+<div class="container">
+  <nav class="navbar">
+    <a class="navbar-brand" href="#">Piggy Bank</a>
+  </nav>
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Your balance is: {{balance}}</h1>
+    </div>
+
+    <div class="col-md-2"><h1>Deposit amount: </h1></div>
+    <div class="col-md-4">
+      <form name="name" class="form" (submit)="submitform(newBalance.value)">
+        <input #newBalance type="number"/>
+        <button type="submit" class="btn">
+          Deposit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
