@@ -3,7 +3,7 @@ package com.lithespeed.bankapp.domain;
 import org.springframework.stereotype.Service;
 
 @Service
-public class Balance {
+public class Bank {
 
     private int balance = 0;
 

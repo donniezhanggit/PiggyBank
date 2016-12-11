@@ -7,6 +7,10 @@ public class Deposit {
     public Deposit() {
     }
 
+    public Deposit(int amount) {
+        depositAmount = amount;
+    }
+
     public int getDepositAmount() {
         return depositAmount;
     }
