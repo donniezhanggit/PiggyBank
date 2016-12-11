@@ -8,8 +8,6 @@ import org.springframework.test.util.ReflectionTestUtils;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 
 public class BankControllerTest {
@@ -21,13 +19,11 @@ public class BankControllerTest {
     }
 
     @Test
-    public void itDeposits() {
-        Bank bank = mock(Bank.class);
+    public void itDepositsAnAmount() {
+        Bank bank = new Bank();
         ReflectionTestUtils.setField(bankController, "bank", bank);
         Deposit deposit = new Deposit(20);
-        when(bank.getBalance()).thenReturn(20);
         bankController.deposit(deposit);
         assertThat(bankController.balance().getAmount(), is(20));
-
     }
 }

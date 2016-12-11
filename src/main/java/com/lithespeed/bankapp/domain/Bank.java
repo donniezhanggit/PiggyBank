@@ -9,7 +9,6 @@ public class Bank {
 
     public int deposit(int amount) {
         balance += amount;
-        System.out.println("New balance is: " + balance);
         return balance;
     }
 
